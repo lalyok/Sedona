@@ -10,31 +10,29 @@
         <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="bitton"><span class="visually-hidden">Откыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="#">
-                Главная
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">
-                Фото и видео
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">
-                Форма Отзыва
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">
-                HTML ACADEMY
-              </a>
-            </li>
-          </ul>
-        </div>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Откыть меню</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Фото и видео
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              HTML ACADEMY
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -55,7 +53,7 @@
               Седона круче, чем гранд каньон!
             </p>
           </header>
-          <ul class="features__list">
+          <ol class="features__list">
             <li class="features__item feature">
               <h3 class="feature__heading">Настоящий городок</h3>
               <p class="feature__number">
@@ -64,7 +62,7 @@
               <p class="feature__text">
                 Седона не аттракцион для туристов, там течет своя жизнь
               </p>
-              <img class="feature__image" src="img/photo-city@1x 1.jpg" width="520" height="260" alt="Вид на город Седона">
+              <img class="feature__image" src="img/photo-city@1x.jpg" width="520" height="260" alt="Вид на город Седона">
               <ul class="feature__sub-list">
                 <li class="feature__sub-item feature__sub-item--housing">
                   <b>Жилье</b>
@@ -94,7 +92,7 @@
               <p class="feature__text">
                 Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
-              <img class="feature__image" src="img/photo-bridge@1x 1.jpg" width="520" height="260" alt="Вид на мост дьявола">
+              <img class="feature__image" src="img/photo-bridge@1x.jpg" width="520" height="260" alt="Вид на мост дьявола">
             </li>
             <li class="features__item feature">
               <h3 class="feature__heading">Небольшая площадь</h3>
@@ -123,7 +121,7 @@
                 Большинство едет в гранд каньон и толпится там
               </p>
             </li>
-          </ul>
+          </ol>
         </div>
       </section>
 
@@ -158,18 +156,26 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item social__item--twitter">
-              <a class="social__link" href="#">Твиттер</a>
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
             </li>
             <li class="social__item social__item--facebook">
-              <a class="social__link" href="#">Фейсбук</a>
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
             </li>
             <li class="social__item social__item--youtube">
-              <a class="social__link" href="#">Ютуб</a>
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright">
-          <a href="#"><span>Разработано</span><img src="img/htmlacademy-logo-black.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="#">
+            <span>Разработано</span><img src="img/htmlacademy-logo-black.svg" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
         </div>
       </div>
     </footer>
