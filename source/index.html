@@ -1,12 +1,177 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
+    <title>HTML Academy: Sedona</title>
   </head>
-  <body>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="bitton"><span class="visually-hidden">Откыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Фото и видео
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Форма Отзыва
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                HTML ACADEMY
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+    <main class="page-main">
+      <h1 class="visually-hidden">Поиск гостиниц в городе Sedona</h1>
 
+      <section class="features">
+        <div class="features__wrapper">
+          <header class="features__header">
+            <h2 class="visually-hidden">Причины посетить Седону</h2>
+            <p class="features__title">
+              Седона — небольшой<br>
+              городок в Аризоне,<br>
+              заслуживающий большего!
+            </p>
+            <p class="features__intro">
+              Рассмотрим 5 причин, по которым<br>
+              Седона круче, чем гранд каньон!
+            </p>
+          </header>
+          <ul class="features__list">
+            <li class="features__item feature">
+              <h3 class="feature__heading">Настоящий городок</h3>
+              <p class="feature__number">
+                — №1 —
+              </p>
+              <p class="feature__text">
+                Седона не аттракцион для туристов, там течет своя жизнь
+              </p>
+              <img class="feature__image" src="img/photo-city@1x 1.jpg" width="520" height="260" alt="Вид на город Седона">
+              <ul class="feature__sub-list">
+                <li class="feature__sub-item feature__sub-item--housing">
+                  <b>Жилье</b>
+                  <p>
+                    Рекомендуем пожить в настоящем мотеле, все как в кино!
+                  </p>
+                </li>
+                <li class="feature__sub-item feature__sub-item--souvenirs">
+                  <b>Сувениры</b>
+                  <p>
+                    Не только китайского, но и местного производства!
+                  </p>
+                </li>
+                <li class="feature__sub-item feature__sub-item--food">
+                  <b>Еда</b>
+                  <p>
+                    Всегда заказывайте фирменный бургер, Вы не разочаруетесь!
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="features__item feature">
+              <h3 class="feature__heading">Там есть Мост дьявола</h3>
+              <p class="feature__number">
+                — №2 —
+              </p>
+              <p class="feature__text">
+                Да, по нему можно пройти! Если вы осмелитесь, конечно
+              </p>
+              <img class="feature__image" src="img/photo-bridge@1x 1.jpg" width="520" height="260" alt="Вид на мост дьявола">
+            </li>
+            <li class="features__item feature">
+              <h3 class="feature__heading">Небольшая площадь</h3>
+              <p class="feature__number">
+                — №3 —
+              </p>
+              <p class="feature__text">
+                Все интересные места находятся очень близко
+              </p>
+            </li>
+            <li class="features__item feature">
+              <h3 class="feature__heading">Красивая дорога</h3>
+              <p class="feature__number">
+                — №4 —
+              </p>
+              <p class="feature__text">
+                Ехать в Седону из Лас-Вегаса совсем не скучно!
+              </p>
+            </li>
+            <li class="features__item feature">
+              <h3 class="feature__heading">Мало туристов</h3>
+              <p class="feature__number">
+                — №5 —
+              </p>
+              <p class="feature__text">
+                Большинство едет в гранд каньон и толпится там
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="proposal">
+        <div class="proposal__wrapper">
+          <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
+          <p class="proposal__title">
+            Заинтересовались?
+          </p>
+          <p class="proposal__text">
+            Укажите предполагаемые датыпоездки, и мы покажем вам лучшиепредложения гостиниц в Седоне
+          </p>
+          <a class="button proposal__button" href="#">
+            Найти гостиницу
+          </a>
+        </div>
+      </section>
+
+      <section class="map">
+
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__hashtag">
+          <p>
+            #visitSEDONA
+          </p>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item social__item--twitter">
+              <a class="social__link" href="#">Твиттер</a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a class="social__link" href="#">Фейсбук</a>
+            </li>
+            <li class="social__item social__item--youtube">
+              <a class="social__link" href="#">Ютуб</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <a href="#"><span>Разработано</span><img src="img/htmlacademy-logo-black.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
