@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Sedona — каталог</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Откыть меню</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="#">
+              Фото и видео
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Форма Отзыва
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              HTML ACADEMY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Галерея</h1>
+      <div class="page-main__header section-header">
+        <b class="section-header__title">Фото и видео</b>
+        <p class="section-header__intro">
+          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
+      </div>
+
+      <section class="photo-gallery">
+        <h2 class="visually-hidden">Снимки из Седоны</h2>
+        <article class="photo-gallery__item photo-gallery-content">
+          <img class="photo-gallery-content__image" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Вид на дорогу в закате">
+          <h3 class="photo-gallery-content__title">
+            Неродные просторы
+          </h3>
+          <p class="photo-gallery-content__author">
+            Автор фото: Борис
+          </p>
+          <p class="photo-gallery-content__likes">
+            1350
+          </p>
+        </article>
+        <article class="photo-gallery__item photo-gallery-content">
+          <img class="photo-gallery-content__image" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактусы на фоне каньона">
+          <h3 class="photo-gallery-content__title">
+            Местная растительность
+          </h3>
+          <p class="photo-gallery-content__author">
+            Автор фото: Сергей
+          </p>
+          <p class="photo-gallery-content__likes">
+            143
+          </p>
+        </article>
+        <article class="photo-gallery__item photo-gallery-content">
+          <img class="photo-gallery-content__image" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Извивающаяся автомобильная дорога в лесистых холмах">
+          <h3 class="photo-gallery-content__title">
+            Дорога на север
+          </h3>
+          <p class="photo-gallery-content__author">
+            Автор фото: Петр
+          </p>
+          <p class="photo-gallery-content__likes">
+            96
+          </p>
+        </article>
+        <article class="photo-gallery__item photo-gallery-content">
+          <img class="photo-gallery-content__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Каньон в ясную погоду">
+          <h3 class="photo-gallery-content__title">
+            Мост дьявола
+          </h3>
+          <p class="photo-gallery-content__author">
+            Автор фото: Антон
+          </p>
+          <p class="photo-gallery-content__likes">
+            254
+          </p>
+        </article>
+      </section>
+
+      <section class="video-gallery">
+        <h2 class="visually-hidden">Видео из Седоны</h2>
+        <div class="video-gallery-header section-header">
+          <b class="section-header__title">Все еще сомневаетесь?</b>
+          <p class="section-header__intro">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+          </p>
+        </div>
+        <div class="video-gallery__item video-gallery-content">
+          <img class="video-gallery-content__preview" src="img/video-mobile.jpg" width="320" height="200" alt="Видеопрезентация тура в Седону">
+          <div class="video-gallery-content__player video-player">
+            <div class="video-player__timeline">
+              <div class="video-player__timeline-bar"></div>
+
+            </div>
+            <div class="video-player__buttons player-buttons">
+              <button class="player-buttons__reload" type="button">Перезагрузить</button>
+              <button class="player-buttons__subtitles" type="button">Субтитры</button>
+              <button class="player-buttons__full" type="button">На весь экран</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__hashtag">
+          <p>
+            #visitSEDONA
+          </p>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item social__item--twitter">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li class="social__item social__item--facebook">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+            <li class="social__item social__item--youtube">
+              <a class="social__link" href="#">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="#">
+            <span>Разработано</span><img src="img/htmlacademy-logo-black.svg" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -78,15 +78,15 @@
             <legend>Ваше общее впечатление:</legend>
             <ul class="experience-form__list">
               <li class="experience-form__item form-radio">
-                <input class="form-radio__input" id="user-experience-positive" type="radio" name="user-experience" value="rather-positive" checked>
+                <input class="visually-hidden" id="user-experience-positive" type="radio" name="user-experience" value="rather-positive" checked>
                 <label class="form-radio__label" for="user-experience-positive">Скорее положительное</label>
               </li>
               <li class="experience-form__item form-radio">
-                <input class="form-radio__input" id="user-experience-negative" type="radio" name="user-experience" value="rather-negative">
+                <input class="visually-hidden" id="user-experience-negative" type="radio" name="user-experience" value="rather-negative">
                 <label class="form-radio__label" for="user-experience-negative">Скорее отрицательное</label>
               </li>
               <li class="experience-form__item form-radio">
-                <input class="form-radio__input" id="user-experience-unknown" type="radio" name="user-experience" value="unknown">
+                <input class="visually-hidden" id="user-experience-unknown" type="radio" name="user-experience" value="unknown">
                 <label class="form-radio__label" for="user-experience-unknown">Затрудняюсь ответить</label>
               </li>
             </ul>
@@ -95,27 +95,27 @@
             <legend>Посещенные<br>достопримечательности:</legend>
             <ul class="attendance-form__list">
               <li class="attendance-form__item form-checkbox">
-                <input class="form-checkbox__input" id="user-attendance-devils-bridge" type="checkbox" name="devils-bridge" checked>
+                <input class="visually-hidden" id="user-attendance-devils-bridge" type="checkbox" name="devils-bridge" checked>
                 <label class="form-checkbox__label" for="user-attendance-devils-bridge">Мост Дьявола</label>
               </li>
               <li class="attendance-form__item form-checkbox">
-                <input class="form-checkbox__input" id="user-attendance-bell-rock" type="checkbox" name="bell-rock" checked>
+                <input class="visually-hidden" id="user-attendance-bell-rock" type="checkbox" name="bell-rock" checked>
                 <label class="form-checkbox__label" for="user-attendance-bell-rock">Гора-Колокол</label>
               </li>
               <li class="attendance-form__item form-checkbox">
-                <input class="form-checkbox__input" id="user-attendance-slide-park" type="checkbox" name="slide-park" checked>
+                <input class="visually-hidden" id="user-attendance-slide-park" type="checkbox" name="slide-park" checked>
                 <label class="form-checkbox__label" for="user-attendance-slide-park">Слайд-парк</label>
               </li>
               <li class="attendance-form__item form-checkbox">
-                <input class="form-checkbox__input" id="user-attendance-red-rocks" type="checkbox" name="red-rocks">
+                <input class="visually-hidden" id="user-attendance-red-rocks" type="checkbox" name="red-rocks">
                 <label class="form-checkbox__label" for="user-attendance-red-rocks">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback-form__item letter-form">
-            <legend>Опишите свои эмоции:</legend>
-            <textarea class="letter-form__text-input">Опишите подробно все свои восторги</textarea>
-          </fieldset>
+          <div class="feedback-form__item letter-form">
+            <label for="user-letter">Опишите свои эмоции:</label>
+            <textarea class="letter-form__user-text" id="user-letter">Опишите подробно все свои восторги</textarea>
+          </div>
           <input class="feedback-form__submit-button" type="submit" value="Отправить отзыв">
         </form>
       </section>
