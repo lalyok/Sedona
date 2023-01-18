@@ -25,10 +25,25 @@
 @text-color-dimmed: #333333;
 @text-size: 14px;
 @line-height: @text-size * 1.8;
+@site-menu-height: 56px;
 
 // Global properties
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
 }

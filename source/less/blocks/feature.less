@@ -1,0 +1,35 @@
+.feature {
+  background-color: @basic-color;
+  color: @basic-white;
+
+  &--gray-bg {
+    background-color: @basic-gray;
+    color: @basic-text-color;
+  }
+
+  p {
+    line-height: @text-size * 1.5;
+  }
+}
+
+.feature__heading {
+  font-weight: bold;
+}
+
+.feature__number {
+  &--gray-text {
+  color: @text-color-dimmed;
+  }
+}
+
+.feature__text {
+  &--gray-text {
+  color: @text-color-dimmed;
+  }
+}
+
+.feature__image {
+  object-fit: contain;
+  background-color: @basic-gray;
+}
+
