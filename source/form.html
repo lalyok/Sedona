@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <title>HTML Academy: Sedona — каталог</title>
   </head>
   <body class="page__body">
@@ -39,9 +40,9 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Форма отзыва</h1>
-      <div class="page-main__header section-header">
-        <b class="section-header__title">Оставьте свой отзыв</b>
-        <p class="section-header__intro">
+      <div class="inner-main">
+        <b class="inner-main__title">Оставьте свой отзыв</b>
+        <p class="inner-main__intro">
           Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </div>
@@ -49,7 +50,7 @@
         <h2 class="visually-hidden">Поля формы отзыва</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="feedback-form__item name-form">
-            <legend>Представьтесь:</legend>
+            <p class="feedback-form__subtitle">Представьтесь:</p>
             <div class="name-form__inner form-field">
               <label class="form-field__label" for="user-name">Имя*:</label>
               <input class="form-field__input name-form__name" id="user-name" type="text" name="user-name" placeholder="Петр" required>
@@ -64,18 +65,22 @@
             </div>
           </fieldset>
           <fieldset class="feedback-form__item contacts-form">
-            <legend>Контактная информация:</legend>
+            <legend class="feedback-form__subtitle">Контактная информация:</legend>
             <div class="contacts-form__inner form-field">
               <label class="form-field__label" for="user-phone">Контактный телефон*:</label>
-              <input class="form-field__input contacts-form__phone" id="user-phone" type="tel" placeholder="Введите телефон" required>
+              <p>
+                <input class="form-field__input contacts-form__phone" id="user-phone" type="tel" placeholder="Введите телефон" required>
+              </p>
             </div>
             <div class="contacts-form__inner form-field">
               <label class="form-field__label" for="user-email">Электронная почта*:</label>
-              <input class="form-field__input contacts-form__email" id="user-email" type="email" placeholder="Введите e-mail" required>
+              <p>
+                <input class="form-field__input contacts-form__email" id="user-email" type="email" placeholder="Введите e-mail" required>
+              </p>
             </div>
           </fieldset>
           <fieldset class="feedback-form__item experience-form">
-            <legend>Ваше общее впечатление:</legend>
+            <legend class="feedback-form__subtitle">Ваше общее впечатление:</legend>
             <ul class="experience-form__list">
               <li class="experience-form__item form-radio">
                 <input class="visually-hidden" id="user-experience-positive" type="radio" name="user-experience" value="rather-positive" checked>
@@ -92,7 +97,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback-form__item attendance-form">
-            <legend>Посещенные<br>достопримечательности:</legend>
+            <legend class="feedback-form__subtitle">Посещенные<br>достопримечательности:</legend>
             <ul class="attendance-form__list">
               <li class="attendance-form__item form-checkbox">
                 <input class="visually-hidden" id="user-attendance-devils-bridge" type="checkbox" name="devils-bridge" checked>
@@ -113,10 +118,12 @@
             </ul>
           </fieldset>
           <div class="feedback-form__item letter-form">
-            <label for="user-letter">Опишите свои эмоции:</label>
-            <textarea class="letter-form__user-text" id="user-letter">Опишите подробно все свои восторги</textarea>
+            <label class="feedback-form__subtitle" for="user-letter">Опишите свои эмоции:</label>
+            <div>
+              <textarea class="letter-form__user-text" id="user-letter">Опишите подробно все свои восторги</textarea>
+            </div>
           </div>
-          <input class="feedback-form__submit-button" type="submit" value="Отправить отзыв">
+          <input class="button feedback-form__submit-button" type="submit" value="Отправить отзыв">
         </form>
       </section>
 

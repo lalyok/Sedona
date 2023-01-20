@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <title>HTML Academy: Sedona — каталог</title>
   </head>
   <body class="page__body">
@@ -39,60 +40,60 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Галерея</h1>
-      <div class="page-main__header section-header">
-        <b class="section-header__title">Фото и видео</b>
-        <p class="section-header__intro">
+      <div class="inner-main">
+        <b class="inner-main__title">Фото и видео</b>
+        <p class="inner-main__intro">
           Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
         </p>
       </div>
 
       <section class="photo-gallery">
         <h2 class="visually-hidden">Снимки из Седоны</h2>
-        <article class="photo-gallery__item photo-gallery-content">
-          <img class="photo-gallery-content__image" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Вид на дорогу в закате">
-          <h3 class="photo-gallery-content__title">
+        <article class="photo-gallery__item photo">
+          <img class="photo__image" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Вид на дорогу в закате">
+          <h3 class="photo__title">
             Неродные просторы
           </h3>
-          <p class="photo-gallery-content__author">
+          <p class="photo__author">
             Автор фото: Борис
           </p>
-          <p class="photo-gallery-content__likes">
+          <p class="photo__likes">
             1350
           </p>
         </article>
-        <article class="photo-gallery__item photo-gallery-content">
-          <img class="photo-gallery-content__image" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактусы на фоне каньона">
-          <h3 class="photo-gallery-content__title">
+        <article class="photo-gallery__item photo">
+          <img class="photo__image" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактусы на фоне каньона">
+          <h3 class="photo__title">
             Местная растительность
           </h3>
-          <p class="photo-gallery-content__author">
+          <p class="photo__author">
             Автор фото: Сергей
           </p>
-          <p class="photo-gallery-content__likes">
+          <p class="photo__likes">
             143
           </p>
         </article>
-        <article class="photo-gallery__item photo-gallery-content">
-          <img class="photo-gallery-content__image" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Извивающаяся автомобильная дорога в лесистых холмах">
-          <h3 class="photo-gallery-content__title">
+        <article class="photo-gallery__item photo">
+          <img class="photo__image" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Извивающаяся автомобильная дорога в лесистых холмах">
+          <h3 class="photo__title">
             Дорога на север
           </h3>
-          <p class="photo-gallery-content__author">
+          <p class="photo__author">
             Автор фото: Петр
           </p>
-          <p class="photo-gallery-content__likes">
+          <p class="photo__likes">
             96
           </p>
         </article>
-        <article class="photo-gallery__item photo-gallery-content">
-          <img class="photo-gallery-content__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Каньон в ясную погоду">
-          <h3 class="photo-gallery-content__title">
+        <article class="photo-gallery__item photo">
+          <img class="photo__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Каньон в ясную погоду">
+          <h3 class="photo__title">
             Мост дьявола
           </h3>
-          <p class="photo-gallery-content__author">
+          <p class="photo__author">
             Автор фото: Антон
           </p>
-          <p class="photo-gallery-content__likes">
+          <p class="photo__likes">
             254
           </p>
         </article>
@@ -100,23 +101,29 @@
 
       <section class="video-gallery">
         <h2 class="visually-hidden">Видео из Седоны</h2>
-        <div class="video-gallery-header section-header">
+        <div class="video-gallery__header section-header">
           <b class="section-header__title">Все еще сомневаетесь?</b>
           <p class="section-header__intro">
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
         </div>
-        <div class="video-gallery__item video-gallery-content">
-          <img class="video-gallery-content__preview" src="img/video-mobile.jpg" width="320" height="200" alt="Видеопрезентация тура в Седону">
-          <div class="video-gallery-content__player video-player">
+        <div class="video-gallery__item video">
+          <img class="video__preview" src="img/video-mobile.jpg" width="320" height="200" alt="Видеопрезентация тура в Седону">
+          <div class="video__player video-player">
             <div class="video-player__timeline">
               <div class="video-player__timeline-bar"></div>
 
             </div>
             <div class="video-player__buttons player-buttons">
-              <button class="player-buttons__reload" type="button">Перезагрузить</button>
-              <button class="player-buttons__subtitles" type="button">Субтитры</button>
-              <button class="player-buttons__full" type="button">На весь экран</button>
+              <button class="player-buttons__reload" type="button">
+                <span class="visually-hidden">Перезагрузить</span>
+              </button>
+              <button class="player-buttons__subtitles" type="button">
+                <span class="visually-hidden">Субтитры</span>
+              </button>
+              <button class="player-buttons__full" type="button">
+                <span class="visually-hidden">На весь экран</span>
+              </button>
             </div>
           </div>
         </div>
