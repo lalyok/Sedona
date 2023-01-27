@@ -1,5 +1,29 @@
+.photo-gallery {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 0;
+  }
+}
+
 .photo-gallery__item {
   border-top: 1px solid @dark-gray;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border-top: none;
+  }
+
+  &--full-width {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
 }

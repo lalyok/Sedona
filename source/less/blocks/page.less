@@ -1,8 +1,16 @@
 .page {
   height: 100%;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: @text-size;
   line-height: @line-height;
   background-color: @basic-white;
+}
+
+.page__body-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }

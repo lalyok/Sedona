@@ -8,7 +8,7 @@
     <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <div class="page-body__wrapper">
+    <div class="page__body-wrapper">
       <header class="page-header">
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -54,20 +54,26 @@
       </header>
 
       <main class="page-main">
-        <h1 class="visually-hidden">Поиск гостиниц в городе Sedona</h1>
+        <header class="page-main__header page-main__header--index">
+          <h1 class="visually-hidden">Поиск гостиниц в городе Sedona</h1>
+          <img class="page-main__greeting" src="img/greating-phrase.svg" width="157" height="52">
+          <img class="page-main__naming page-main__naming--index" src="img/sedona-naming.svg" width="230" height="40">
+          <img class="page-main__slogan" src="img/main-slogan.svg" width="180" height="48">
+        </header>
 
         <section class="features">
           <div class="features__wrapper">
-            <header class="features__header">
+            <header class="section-header">
               <h2 class="visually-hidden">Причины посетить Седону</h2>
-              <p class="features__title">
-                Седона — небольшой городок в Аризоне,<br>
-                заслуживающий большего!
-              </p>
-              <p class="features__intro">
-                Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-              </p>
+              <div class="section-header__wrapper">
+                <b class="section-header__title">Седона — небольшой городок в Аризоне,<br>
+                  заслуживающий большего!</b>
+                <p class="section-header__intro">
+                  Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+                </p>
+              </div>
             </header>
+
             <ol class="features__list">
               <li class="features__item  feature features__item--has-image feature--has-image">
                 <div class="feature__wrapper">
@@ -152,13 +158,16 @@
 
         <section class="proposal">
           <div class="proposal__wrapper">
-            <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
-            <p class="proposal__title">
-              Заинтересовались?
-            </p>
-            <p class="proposal__text">
-              Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-            </p>
+            <header class="section-header">
+              <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
+              <div class="section-header__wrapper">
+                <b class="section-header__title">Заинтересовались?</b>
+                <p class="section-header__intro">
+                  Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+                </p>
+              </div>
+            </header>
+
             <a class="button proposal__button" href="#">
               Найти гостиницу
             </a>
@@ -166,7 +175,8 @@
         </section>
 
         <section class="map">
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1936407.91668881!2d-113.12975748495812!3d34.86878828043471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1674542424101!5m2!1sru!2sru" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h2 class="visually-hidden">Карта</h2>
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1936407.91668881!2d-113.12975748495812!3d34.86878828043471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1674542424101!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
       </main>
@@ -196,8 +206,8 @@
             </ul>
           </div>
           <div class="page-footer__item copyright">
+            <span class="copyright__text">Разработано</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span>Разработано</span>
               <img src="img/htmlacademy-logo-black.svg" width="27" height="34" alt="Логотип HTML Academy">
             </a>
           </div>

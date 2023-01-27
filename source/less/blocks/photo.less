@@ -1,22 +1,68 @@
+.photo {
+  position: relative;
+}
+
+.photo__image-link {
+  display: block;
+}
+
 .photo__image {
-  text-align: center;
+  display: block;
+  object-fit: contain;
+}
+
+.photo__inner {
+  @media (min-width: @tablet-width) {
+    background-color: @light-gray;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: rgba(@basic-text-color, 0.3);
+    color: @basic-white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &--dark {
+    @media (min-width: @tablet-width) {
+      background-color: @dark-gray;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-color: rgba(@basic-text-color, 0.3);
+    }
+  }
 }
 
 .photo__title {
   font-size: @text-size;
   font-weight: bold;
-  margin-top: 18px;
-  margin-bottom: 12px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-top: 20px;
 }
 
 .photo__author {
   text-transform: none;
   color: @text-color-dimmed;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 15px;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .photo__likes {
   font-weight: bold;
   margin: 0;
+  margin-left: 38px;
+
+  @media (min-width: @tablet-width) {
+    justify-self: end;
+  }
 }

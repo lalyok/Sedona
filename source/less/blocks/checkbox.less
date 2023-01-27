@@ -1,0 +1,31 @@
+.checkbox__label {
+  text-transform: none;
+  font-weight: bold;
+  font-size: @text-size * 1.3;
+}
+
+.checkbox__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.checkbox__item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
+}
