@@ -1,7 +1,11 @@
-.section-title-style(@text-ratio: 1.3) {
+.section-title-style() {
   display: block;
-  font-size: @text-size * @text-ratio;
+  font-size: @text-size * 1.3;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: @text-size * 2.2;
+  }
 }
 
 .section-intro-style() {

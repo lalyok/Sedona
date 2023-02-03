@@ -6,6 +6,20 @@
   text-transform: uppercase;
   font-weight: bold;
   border: none;
-  padding: 25px;
+  padding: 15px 15px 18px;
   background-color: @basic-color;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-color-hover;
+  }
+
+  &:active {
+    background-color: @basic-color-active;
+    color: rgba(@basic-white, 0.3);
+  }
+
+  &:disabled {
+    background-color: @dark-gray;
+  }
 }

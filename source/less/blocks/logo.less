@@ -1,6 +1,31 @@
 .logo {
   background-color: @basic-white;
-  height: 56px;
   display: flex;
   justify-content: center;
+}
+
+.logo__wrapper {
+  flex-grow: 1;
+}
+
+.logo__link {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo__image {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 102px;
+  height: 84px;
+  z-index: 2;
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 96px;
+  }
 }

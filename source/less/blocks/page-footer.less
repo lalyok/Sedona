@@ -1,5 +1,5 @@
 .page-footer__wrapper {
-  padding: 35px 20px 25px;
+  padding: 39px 20px 23px;
   display: flex;
   flex-direction: column;
 
@@ -14,12 +14,21 @@
 }
 
 .page-footer__item {
-  padding: 0;
-  margin: 0 auto;
+  padding: 0 20px;
+  margin: 0 auto 40px;
   text-align: center;
 
-  &:not(:last-child) {
-    margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column: span 1;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 
   &--hashtag {
@@ -29,13 +38,5 @@
 
   p {
     margin: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    grid-column: span 1;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
   }
 }

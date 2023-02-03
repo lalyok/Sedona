@@ -3,22 +3,18 @@
 }
 
 .proposal__wrapper {
-  padding: 40px 20px 50px;
+  padding: 33px 20px 49px;
   max-width: 498px;
   margin: 0 auto;
-}
 
-.proposal__title {
-  font-size: @text-size * 1.3;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 35px;
-}
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
 
-.proposal__text {
-  color: @text-color-dimmed;
-  margin: 0;
-  margin-bottom: 35px;
+  @media (min-width: @desktop-width) {
+    padding-bottom: 66px;
+  }
 }
 
 .proposal__button {

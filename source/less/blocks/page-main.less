@@ -1,29 +1,85 @@
 .page-main__header {
-  background: @basic-color url("../../img/bg-inner-main@mobile.jpg") top center no-repeat;
+  background-color: @basic-gray;
+  background-image: url("../../img/bg-main@0.75x.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
-  &--index {
-    background: @basic-gray url("../../img/bg-main-index@mobile.jpg") top center no-repeat;
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/bg-main@1x.jpg");
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    max-width: 1200px;
+    min-height: 57px;
+    background-image: url("../../img/intro-triangle.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
   }
 }
 
 .page-main__naming {
-  padding-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 52px;
+  margin-bottom: 67px;
+  width: 230px;
+  height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 95px;
+    margin-bottom: 117px;
+    width: 457px;
+    height: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 101px;
+    margin-bottom: 120px;
+  }
 
   &--index {
-    padding-top: 0;
-    margin-bottom: 37px;
+    margin-top: 0;
+    margin-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 58px;
+      width: 461px;
+      height: 80px;
+    }
   }
 }
 
 .page-main__greeting {
-  padding-top: 90px;
+  margin-top: 90px;
   margin-bottom: 31px;
+  width: 157px;
+  height: 52px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 77px;
+    margin-bottom: 51px;
+    width: 257px;
+    height: 85px;
+  }
 }
 
 .page-main__slogan {
-  margin-bottom: 90px;
+  margin-bottom: 85px;
+  width: 180px;
+  height: 48px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 91px;
+    width: 294px;
+    height: 79px;
+  }
 }

@@ -1,10 +1,10 @@
 .video-player {
   background-color: rgba(@basic-text-color, 0.3);
-  display: flex;
-  flex-wrap: wrap;
-  height: 93px;
+  min-height: 93px;
   padding-left: 35px;
   padding-right: 41px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   position: absolute;
   bottom: 0;
@@ -14,7 +14,7 @@
   @media (max-width: @mobile-width-only) {
     padding-left: 25px;
     padding-right: 23px;
-    height: 66px;
+    min-height: 66px;
     background-color: @light-gray;
     position: relative;
   }
@@ -24,6 +24,7 @@
   height: 45px;
   flex-grow: 1;
   display: flex;
+  padding: 0 22px;
 
   @media (max-width: @mobile-width-only) {
     background-color: rgba(@basic-text-color, 0.3);
@@ -38,23 +39,31 @@
   background-color: rgba(@basic-white, 0.2);
   height: 3px;
   width: 100%;
-  margin: auto 42px;
   position: relative;
+  margin: auto 0;
+  cursor: pointer;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: @basic-white;
-    position: absolute;
-    top: -3px;
-    left: 14%;
-  }
+.video-player__cursor {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: @basic-white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
 }
 
 .video-player__button {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
   &--subtitles {
     margin-right: 30px;
   }
@@ -66,6 +75,33 @@
     @media (max-width: @mobile-width-only) {
       order: 0;
       margin-right: auto;
+    }
+  }
+
+  path {
+    fill: @player-button-color;
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
+    }
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: @text-color-dimmed;
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
+      opacity: 0.6;
+    }
+  }
+
+  &:active path {
+    fill: @text-color-dimmed;
+    opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      fill: @basic-white;
     }
   }
 }

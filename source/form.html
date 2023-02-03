@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Sedona — каталог</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <title>HTML Academy: Sedona — каталог</title>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">  <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <div class="page__body-wrapper">
       <header class="page-header">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--no-js">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">
                 Главная
               </a>
@@ -32,26 +39,33 @@
                 HTML ACADEMY
               </a>
             </li>
-            <li class="main-nav__item main-nav__item--close">
-              <button type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-            </li>
-            <li class="main-nav__item main-nav__item--toggle">
-              <button type="button">
-                <span class="visually-hidden">Откыть меню</span>
-              </button>
-            </li>
             <li class="main-nav__item main-nav__item--logo logo">
               <div class="logo__wrapper">
-                <a class="logo__image" href="index.html">
-                  <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                <a class="logo__link" href="index.html">
+                  <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
                 </a>
               </div>
             </li>
           </ul>
         </nav>
       </header>
+
+      <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+
+        navMain.classList.remove('main-nav--no-js');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-nav--closed')) {
+            navMain.classList.remove('main-nav--closed');
+            navMain.classList.add('main-nav--opened');
+          } else {
+            navMain.classList.add('main-nav--closed');
+            navMain.classList.remove('main-nav--opened');
+          }
+        });
+      </script>
 
       <main class="page-main">
         <header class="page-main__header">
@@ -60,7 +74,7 @@
         </header>
 
         <section class="feedback">
-          <header class="section-header">
+          <header class="section-header section-header--form">
             <h2 class="visually-hidden">Поля формы отзыва</h2>
             <div class="section-header__wrapper">
               <b class="section-header__title">Оставьте свой отзыв</b>
@@ -73,15 +87,15 @@
           <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="feedback-form__item feedback-form__item--name">
               <h3 class="feedback-form__subtitle">Представьтесь:</h3>
-              <div class="form-field form-field--inline">
+              <div class="form-field">
                 <label class="form-field__label form-field__label--inline" for="user-name">Имя*:</label>
                 <input class="form-field__input" id="user-name" type="text" name="user-name" placeholder="Петр" required>
               </div>
-              <div class="form-field form-field--inline">
+              <div class="form-field">
                 <label class="form-field__label form-field__label--inline" for="user-surname">Фамилия*:</label>
                 <input class="form-field__input" id="user-surname" type="text" name="user-surname" placeholder="Иванов" required>
               </div>
-              <div class="form-field form-field--inline">
+              <div class="form-field">
                 <label class="form-field__label form-field__label--inline" for="user-patronymic">Отчество:</label>
                 <input class="form-field__input" id="user-patronymic" type="text" name="user-patronymic" placeholder="Александрович">
               </div>
@@ -90,12 +104,14 @@
               <h3 class="feedback-form__subtitle">Контактная информация:</h3>
               <div class="feedback-form__item-contacts-wrapper">
                 <div class="form-field">
-                  <label class="form-field__label" for="user-phone">Контактный телефон*:</label>
-                  <input class="form-field__input" id="user-phone" type="tel" placeholder="Введите телефон" required>
+                  <label class="form-field__label form-field__label--new-line" for="user-phone"><span class="hide hide--desktop">Контактный </span>телефон*:</label>
+                  <input class="form-field__input form-field__input--phone" id="user-phone" type="tel" placeholder="Введите телефон" required>
+                  <div class="form-field__icon form-field__icon--phone"></div>
                 </div>
                 <div class="form-field">
-                  <label class="form-field__label" for="user-email">Электронная почта*:</label>
-                  <input class="form-field__input" id="user-email" type="email" placeholder="Введите e-mail" required>
+                  <label class="form-field__label form-field__label--new-line" for="user-email">Электронная почта*:</label>
+                  <input class="form-field__input form-field__input--mail" id="user-email" type="email" placeholder="Введите e-mail" required>
+                  <div class="form-field__icon form-field__icon--mail"></div>
                 </div>
               </div>
             </fieldset>
@@ -103,15 +119,15 @@
               <h3 class="feedback-form__subtitle">Ваше общее впечатление:</h3>
               <ul class="radio__list">
                 <li class="radio__item">
-                  <input class="visually-hidden" id="user-experience-positive" type="radio" name="user-experience" value="rather-positive" checked>
+                  <input class="visually-hidden radio__input" id="user-experience-positive" type="radio" name="user-experience" value="rather-positive" checked>
                   <label class="radio__label" for="user-experience-positive">Скорее положительное</label>
                 </li>
                 <li class="radio__item">
-                  <input class="visually-hidden" id="user-experience-negative" type="radio" name="user-experience" value="rather-negative">
+                  <input class="visually-hidden radio__input" id="user-experience-negative" type="radio" name="user-experience" value="rather-negative">
                   <label class="radio__label" for="user-experience-negative">Скорее отрицательное</label>
                 </li>
                 <li class="radio__item">
-                  <input class="visually-hidden" id="user-experience-unknown" type="radio" name="user-experience" value="unknown">
+                  <input class="visually-hidden radio__input" id="user-experience-unknown" type="radio" name="user-experience" value="unknown">
                   <label class="radio__label" for="user-experience-unknown">Затрудняюсь ответить</label>
                 </li>
               </ul>
@@ -120,19 +136,19 @@
               <h3 class="feedback-form__subtitle">Посещенные<br>достопримечательности:</h3>
               <ul class="checkbox__list">
                 <li class="checkbox__item">
-                  <input class="visually-hidden" id="user-attendance-devils-bridge" type="checkbox" name="devils-bridge" checked>
+                  <input class="visually-hidden checkbox__input" id="user-attendance-devils-bridge" type="checkbox" name="devils-bridge" checked>
                   <label class="checkbox__label" for="user-attendance-devils-bridge">Мост Дьявола</label>
                 </li>
                 <li class="checkbox__item">
-                  <input class="visually-hidden" id="user-attendance-bell-rock" type="checkbox" name="bell-rock" checked>
+                  <input class="visually-hidden checkbox__input" id="user-attendance-bell-rock" type="checkbox" name="bell-rock" checked>
                   <label class="checkbox__label" for="user-attendance-bell-rock">Гора-Колокол</label>
                 </li>
                 <li class="checkbox__item">
-                  <input class="visually-hidden" id="user-attendance-slide-park" type="checkbox" name="slide-park" checked>
+                  <input class="visually-hidden checkbox__input" id="user-attendance-slide-park" type="checkbox" name="slide-park" checked>
                   <label class="checkbox__label" for="user-attendance-slide-park">Слайд-парк</label>
                 </li>
                 <li class="checkbox__item">
-                  <input class="visually-hidden" id="user-attendance-red-rocks" type="checkbox" name="red-rocks">
+                  <input class="visually-hidden checkbox__input" id="user-attendance-red-rocks" type="checkbox" name="red-rocks">
                   <label class="checkbox__label" for="user-attendance-red-rocks">Красные скалы</label>
                 </li>
               </ul>
@@ -145,8 +161,8 @@
             </div>
             <div class="feedback-form__button-wrapper">
               <input class="button feedback-form__submit" type="submit" value="Отправить отзыв">
-              <p class="feedback-form__note">* — обязательные поля</p>
             </div>
+            <p class="feedback-form__note">* — обязательные поля</p>
           </form>
         </section>
 
@@ -160,26 +176,40 @@
           <div class="page-footer__item social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="#">
+                <a class="social__link" href="#">
                   <span class="visually-hidden">Твиттер</span>
+                  <svg class="social__icon" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="46" height="48" fill="#81B3D2"/>
+                    <path d="M25.3 16.1667C27 15.6667 28.4 16.3667 29 17.2667C29.7 17.0667 30.4 16.7667 31.1 16.5667C31.1 17.3667 30.6 18.0667 30.2 18.2667C30.9 18.4667 31.5 17.7667 31.5 17.7667C31.3 18.7667 30.5 19.4667 29.9 19.7667C29.7 26.3667 26.6 30.7667 19.5 30.5667C19 30.5667 19.6 30.5667 19 30.5667C18.6 30.5667 14.7 30.1667 14 28.7667C16.3 28.9667 18 28.3667 18.8 27.6667C17.8 27.3667 16 27.1667 15.7 24.7667C16.1 24.8667 16.3 24.9667 17 24.8667C15.8 24.0667 14.4 23.3667 14.5 21.1667C14.8 21.4667 15.6 21.6667 15.9 21.6667C15.2 21.4667 13.9 18.3667 15 16.8667C16.9 18.6667 18.8 20.3667 22.4 20.5667C22.5 18.2667 23.5 16.7667 25.3 16.1667Z" fill="white"/>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="#">
+                <a class="social__link" href="#">
                   <span class="visually-hidden">Фейсбук</span>
+                  <svg class="social__icon" width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="47" height="48" fill="#81B3D2"/>
+                    <path d="M25.3 16.4C26.1 16.4 26.9 16.4 27.7 16.4C27.7 15.3 27.7 14.2 27.7 13C26.7 13 25.8 13 24.8 13C21.7 13.2 20.5 15.4 20.9 19.1H19V22.6H21C21 25.7 21 28.8 21 31.9C22.3 31.9 23.6 31.9 24.8 31.9C24.8 28.8 24.8 25.7 24.8 22.6H27.7V19.1H24.8C24.8 18.1 24.8 16.7 25.3 16.4Z" fill="white"/>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube" href="#">
+                <a class="social__link" href="#">
                   <span class="visually-hidden">Ютуб</span>
+                  <svg class="social__icon" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="46" height="48" fill="#81B3D2"/>
+                    <path d="M30.1 17H15.8C14.3 17 13 18.3 13 19.8V28.1C13 29.7 14.3 31 15.8 31H30.1C31.7 31 32.9 29.7 32.9 28.2V19.8C33 18.3 31.7 17 30.1 17ZM20 27.4V20.6L26.8 24L20 27.4Z" fill="white"/>
+                  </svg>
                 </a>
               </li>
             </ul>
           </div>
           <div class="page-footer__item copyright">
+            <span class="copyright__text">Разработано</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span>Разработано</span>
-              <img src="img/htmlacademy-logo-black.svg" width="27" height="34" alt="Логотип HTML Academy">
+              <svg class="copyright__logo" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -197,13 +227,13 @@
 
       <div class="modal modal--success">
         <div class="modal__wrapper">
-          <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
           <p class="modal__text">
             Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
           </p>
         </div>
         <div class="modal__button-wrapper">
-          <button class="button modal__button modal__button--success" type="button">Закрыть окно</button>
+          <button class="button modal__button" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>

@@ -2,26 +2,34 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
+  width: auto;
   display: flex;
-  width: 151px;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.social__link--twitter {
-  &::before {
-    content: url("../img/twitter-icon.svg");
+.social__item {
+  margin: 3px;
+}
+
+.social__icon {
+  display: block;
+
+  &:hover,
+  &:focus {
+    rect {
+      fill: @basic-color-hover;
+    }
   }
-}
 
-.social__link--facebook {
-  &::before {
-    content: url("../img/facebook_icon.svg");
-  }
-}
+  &:active {
+    rect {
+      fill: @basic-color-active;
+    }
 
-.social__link--youtube {
-  &::before {
-    content: url("../img/youtube_icon.svg");
+    path {
+      opacity: 0.3;
+    }
   }
 }

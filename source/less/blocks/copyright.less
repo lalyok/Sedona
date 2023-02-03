@@ -2,14 +2,26 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .copyright__text {
   margin-right: 15px;
 }
 
-.copyright__link {
-  img {
-    display: block;
+.copyright__logo {
+  display: block;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: @basic-color;
+    }
+  }
+
+  &:active {
+    path {
+      opacity: 0.3;
+    }
   }
 }

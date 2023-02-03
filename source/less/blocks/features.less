@@ -7,15 +7,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  counter-reset: li;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
+    align-items: center;
   }
 }
 
 .features__item {
+  counter-increment: li;
+
   &--has-image {
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
@@ -24,6 +28,7 @@
       grid-template-columns: repeat(3, 1fr);
       column-gap: 20px;
       justify-items: center;
+      align-items: center;
     }
   }
 
