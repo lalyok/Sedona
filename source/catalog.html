@@ -42,7 +42,11 @@
             <li class="main-nav__item main-nav__item--logo logo">
               <div class="logo__wrapper">
                 <a class="logo__link" href="index.html">
-                  <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                    <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                  </picture>
                 </a>
               </div>
             </li>
@@ -88,7 +92,11 @@
           <div class="photo-gallery__wrapper">
             <article class="photo-gallery__item photo-gallery__item--full-width photo">
               <a class="photo__image-link" href="#">
-                <img class="photo__image" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Вид на дорогу в закате">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                  <img class="photo__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на дорогу в закате">
+                </picture>
               </a>
               <div class="photo__inner">
                 <div class="photo__text-wrapper">
@@ -106,7 +114,11 @@
             </article>
             <article class="photo-gallery__item photo">
               <a class="photo__image-link" href="#">
-                <img class="photo__image" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактусы на фоне каньона">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                  <img class="photo__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактусы на фоне каньона">
+                </picture>
               </a>
               <div class="photo__inner">
                 <div class="photo__text-wrapper">
@@ -124,7 +136,11 @@
             </article>
             <article class="photo-gallery__item photo">
               <a class="photo__image-link" href="#">
-                <img class="photo__image" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Извивающаяся автомобильная дорога в лесистых холмах">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                  <img class="photo__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Извивающаяся автомобильная дорога в лесистых холмах">
+                </picture>
               </a>
               <div class="photo__inner photo__inner--dark">
                 <div class="photo__text-wrapper">
@@ -142,7 +158,11 @@
             </article>
             <article class="photo-gallery__item photo">
               <a class="photo__image-link" href="#">
-                <img class="photo__image" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Каньон в ясную погоду">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                  <img class="photo__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Каньон в ясную погоду">
+                </picture>
               </a>
               <div class="photo__inner">
                 <div class="photo__text-wrapper">
@@ -173,7 +193,10 @@
           </header>
 
           <div class="video-gallery__item video">
-            <img class="video-gallery__preview video__preview" src="img/video-mobile.jpg" width="320" height="200" alt="Видеопрезентация тура в Седону">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <img class="video-gallery__preview video__preview" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="200" alt="Видеопрезентация тура в Седону">
+            </picture>
             <div class="video__player">
               <div class="video-player">
                 <div class="video-player__timeline">

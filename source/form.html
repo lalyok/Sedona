@@ -42,7 +42,11 @@
             <li class="main-nav__item main-nav__item--logo logo">
               <div class="logo__wrapper">
                 <a class="logo__link" href="index.html">
-                  <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                    <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                  </picture>
                 </a>
               </div>
             </li>

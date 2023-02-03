@@ -1,6 +1,6 @@
 .page-main__header {
   background-color: @basic-gray;
-  background-image: url("../../img/bg-main@0.75x.jpg");
+  background-image: url("../../img/main-bg-mobile.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
   display: flex;
@@ -8,8 +8,18 @@
   align-items: center;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/main-bg-mobile@2x.jpg");
+    background-size: 901px auto;
+  }
+
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/bg-main@1x.jpg");
+    background-image: url("../../img/main-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/main-bg-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   &::before {
@@ -25,6 +35,10 @@
     right: 0;
     left: 0;
     margin: 0 auto;
+  }
+
+  &--index {
+    background-position: center top;
   }
 }
 

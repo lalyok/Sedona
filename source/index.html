@@ -42,7 +42,11 @@
             <li class="main-nav__item main-nav__item--logo logo">
               <div class="logo__wrapper">
                 <a class="logo__link" href="#">
-                  <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                    <img class="logo__image" src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+                  </picture>
                 </a>
               </div>
             </li>
@@ -68,7 +72,7 @@
       </script>
 
       <main class="page-main">
-        <header class="page-main__header">
+        <header class="page-main__header page-main__header--index">
           <h1 class="visually-hidden">Поиск гостиниц в городе Sedona</h1>
           <img class="page-main__greeting" src="img/greating-phrase.svg" width="157" height="52" alt="Welcome to the gorgeous">
           <img class="page-main__naming page-main__naming--index" src="img/sedona-naming.svg" width="230" height="40" alt="Sedona">
@@ -96,7 +100,12 @@
                     Седона не аттракцион для туристов, <br class="hide hide--tablet hide--desktop">там течет своя жизнь
                   </p>
                 </div>
-                <img class="features__image feature__image" src="img/photo-city@1x.jpg" width="520" height="260" alt="Вид на город Седона">
+                <div class="features__image-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+                    <img class="feature__image" src="img/photo-city.jpg" srcset="img/photo-city@2x.jpg 2x" width="520" height="260" alt="Вид на город Седона">
+                  </picture>
+                </div>
                 <ul class="features__sub-list feature__sub-list sub-feature">
                   <li class="sub-feature__item sub-feature__item--housing">
                       <b class="sub-feature__title">Жилье</b>
@@ -125,7 +134,12 @@
                     Да, по нему можно пройти! Если вы <br class="hide hide--tablet hide--desktop">осмелитесь, конечно
                   </p>
                 </div>
-                <img class="feature__image features__image features__image--right" src="img/photo-bridge@1x.jpg" width="520" height="260" alt="Вид на мост дьявола">
+                <div class="features__image-wrapper">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                    <img class="feature__image" src="img/photo-bridge.jpg" srcset="img/photo-bridge@2x.jpg 2x" width="520" height="260" alt="Вид на мост дьявола">
+                  </picture>
+                </div>
               </li>
               <li class="features__item feature features__item--no-image feature--no-image">
                 <div class="feature__wrapper">
