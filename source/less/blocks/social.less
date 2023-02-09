@@ -11,25 +11,24 @@
 
 .social__item {
   margin: 3px;
+  background-color: @basic-color;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-color-hover;
+  }
+
+  &:active {
+    background-color: @basic-color-active;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__icon {
   display: block;
-
-  &:hover,
-  &:focus {
-    rect {
-      fill: @basic-color-hover;
-    }
-  }
-
-  &:active {
-    rect {
-      fill: @basic-color-active;
-    }
-
-    path {
-      opacity: 0.3;
-    }
-  }
+  width: 47px;
+  height: 48px;
 }

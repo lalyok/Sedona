@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 158px;
   position: relative;
 
   @media (min-resolution: 2dppx) {
@@ -15,6 +16,7 @@
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/main-bg-desktop.jpg");
+    min-height: 289px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/main-bg-desktop@2x.jpg");
@@ -39,6 +41,11 @@
 
   &--index {
     background-position: center top;
+    min-height: 389px;
+
+    @media (min-width: @tablet-width) {
+      min-height: 518px;
+    }
   }
 }
 
