@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Sedona — каталог</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">  <!-- 180×180 -->
@@ -54,23 +54,6 @@
         </nav>
       </header>
 
-      <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav__toggle');
-
-        navMain.classList.remove('main-nav--no-js');
-
-        navToggle.addEventListener('click', function() {
-          if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--opened');
-          } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--opened');
-          }
-        });
-      </script>
-
       <main class="page-main">
         <header class="page-main__header">
           <h1 class="visually-hidden">Галерея</h1>
@@ -95,6 +78,10 @@
             <article class="photo-gallery__item photo-gallery__item--full-width photo">
               <a class="photo__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
                   <img class="photo__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на дорогу в закате">
@@ -120,6 +107,10 @@
             <article class="photo-gallery__item photo">
               <a class="photo__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
                   <img class="photo__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактусы на фоне каньона">
@@ -145,6 +136,10 @@
             <article class="photo-gallery__item photo">
               <a class="photo__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
                   <img class="photo__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Извивающаяся автомобильная дорога в лесистых холмах">
@@ -170,6 +165,10 @@
             <article class="photo-gallery__item photo">
               <a class="photo__image-link" href="#">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
                   <img class="photo__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Каньон в ясную погоду">
@@ -208,6 +207,9 @@
 
           <div class="video-gallery__item video">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
               <img class="video-gallery__preview video__preview" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="200" alt="Видеопрезентация тура в Седону">
             </picture>
@@ -222,7 +224,7 @@
                 <button class="video-player__button video-player__button--reload" type="button">
                   <span class="visually-hidden">Перезагрузить</span>
                   <svg width="16" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-reload"></use>
+                    <use xlink:href="img/sprite.svg#icon-replay"></use>
                   </svg>
                 </button>
                 <button class="video-player__button video-player__button--subtitles" type="button">
@@ -234,7 +236,7 @@
                 <button class="video-player__button video-player__button--full" type="button">
                   <span class="visually-hidden">На весь экран</span>
                   <svg width="20" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-full"></use>
+                    <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
                   </svg>
                 </button>
               </div>
@@ -255,7 +257,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Твиттер</span>
                   <svg class="social__icon" width="46" height="48" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                    <use xlink:href="img/sprite.svg#twitter-icon"></use>
                   </svg>
                 </a>
               </li>
@@ -263,7 +265,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Фейсбук</span>
                   <svg class="social__icon" width="47" height="48" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                    <use xlink:href="img/sprite.svg#facebook_icon"></use>
                   </svg>
                 </a>
               </li>
@@ -271,7 +273,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Ютуб</span>
                   <svg class="social__icon" width="46" height="48" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                    <use xlink:href="img/sprite.svg#youtube_icon"></use>
                   </svg>
                 </a>
               </li>
@@ -281,12 +283,14 @@
             <span class="copyright__text">Разработано</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__logo" width="27" height="35">
-                <use xlink:href="img/sprite.svg#academy-logo"></use>
+                <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
               </svg>
             </a>
           </div>
         </div>
       </footer>
     </div>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

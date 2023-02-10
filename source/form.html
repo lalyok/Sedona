@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Sedona — каталог</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">  <!-- 180×180 -->
@@ -53,23 +53,6 @@
           </ul>
         </nav>
       </header>
-
-      <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav__toggle');
-
-        navMain.classList.remove('main-nav--no-js');
-
-        navToggle.addEventListener('click', function() {
-          if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--opened');
-          } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--opened');
-          }
-        });
-      </script>
 
       <main class="page-main">
         <header class="page-main__header">
@@ -193,7 +176,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Твиттер</span>
                   <svg class="social__icon" width="46" height="48" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                    <use xlink:href="img/sprite.svg#twitter-icon"></use>
                   </svg>
                 </a>
               </li>
@@ -201,7 +184,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Фейсбук</span>
                   <svg class="social__icon" width="47" height="48" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                    <use xlink:href="img/sprite.svg#facebook_icon"></use>
                   </svg>
                 </a>
               </li>
@@ -209,7 +192,7 @@
                 <a class="social__link" href="#">
                   <span class="visually-hidden">Ютуб</span>
                   <svg class="social__icon" width="46" height="48" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                    <use xlink:href="img/sprite.svg#youtube_icon"></use>
                   </svg>
                 </a>
               </li>
@@ -219,7 +202,7 @@
             <span class="copyright__text">Разработано</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__logo" width="27" height="35">
-                <use xlink:href="img/sprite.svg#academy-logo"></use>
+                <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
               </svg>
             </a>
           </div>
@@ -248,5 +231,6 @@
         </div>
       </div>
     </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
