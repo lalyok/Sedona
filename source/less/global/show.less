@@ -1,0 +1,21 @@
+.show {
+  display: none;
+
+  &--mobile {
+    @media (max-width: @mobile-width-only) {
+      display: block;
+    }
+  }
+
+  &--tablet {
+    @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}

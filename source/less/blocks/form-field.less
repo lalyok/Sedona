@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 }
 
@@ -50,6 +50,11 @@
 
 .form-field__input--user-text {
   min-height: 160px;
+  line-height: @text-size * 1.9;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 13px;
+  }
 }
 
 .form-field__icon {
@@ -77,12 +82,9 @@
   align-self: center;
 
   &--new-line {
-    margin-bottom: 8px;
+    margin-left: 22px;
+    margin-bottom: 6px;
     width: 100%;
-
-    @media (min-width: @tablet-width) {
-      margin-left: 22px;
-    }
 
     @media (min-width: @desktop-width) {
       width: auto;

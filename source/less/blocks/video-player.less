@@ -1,8 +1,8 @@
 .video-player {
   background-color: rgba(@basic-text-color, 0.3);
   min-height: 93px;
-  padding-left: 35px;
-  padding-right: 41px;
+  padding-left: 28px;
+  padding-right: 36px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -12,11 +12,16 @@
   width: 100%;
 
   @media (max-width: @mobile-width-only) {
-    padding-left: 25px;
-    padding-right: 23px;
+    padding-left: 15px;
+    padding-right: 18px;
     min-height: 66px;
     background-color: @light-gray;
     position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 26px;
+    padding-right: 38px;
   }
 }
 
@@ -24,7 +29,7 @@
   height: 45px;
   flex-grow: 1;
   display: flex;
-  padding: 0 22px;
+  padding: 0 35px;
 
   @media (max-width: @mobile-width-only) {
     background-color: rgba(@basic-text-color, 0.3);

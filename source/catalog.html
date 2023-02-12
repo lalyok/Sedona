@@ -10,6 +10,7 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">  <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
     <div class="page__body-wrapper">
@@ -69,7 +70,7 @@
             <div class="section-header__wrapper">
               <b class="section-header__title">Фото и видео</b>
               <p class="section-header__intro">
-                Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+                Не можете решиться на путешествие из-за курса?&ensp;<br class="show show--tablet show--desktop">Фотографии помогут вам забыть о политике и экономике.
               </p>
             </div>
           </header>
@@ -97,7 +98,7 @@
                   </p>
                 </div>
                 <p class="photo__likes">
-                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false"">
+                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-like" aria-hidden="true"></use>
                   </svg>
                   1350
@@ -126,7 +127,7 @@
                   </p>
                 </div>
                 <p class="photo__likes">
-                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false"">
+                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-like" aria-hidden="true"></use>
                   </svg>
                   143
@@ -155,7 +156,7 @@
                   </p>
                 </div>
                 <p class="photo__likes">
-                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false"">
+                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-like" aria-hidden="true"></use>
                   </svg>
                   96
@@ -184,7 +185,7 @@
                   </p>
                 </div>
                 <p class="photo__likes">
-                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false"">
+                  <svg class="photo__likes-icon" width="23" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-like" aria-hidden="true"></use>
                   </svg>
                   254
@@ -207,17 +208,19 @@
 
           <div class="video-gallery__item video">
             <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
 
-              <source media="(min-width: 768px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
               <img class="video-gallery__preview video__preview" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="200" alt="Видеопрезентация тура в Седону">
             </picture>
             <div class="video__player">
               <div class="video-player">
                 <div class="video-player__timeline">
                   <div class="video-player__timeline-bar">
-                    <div class="video-player__cursor" style="left: 14%;">
+                    <div class="video-player__cursor" style="left: 30%;">
                   </div>
                   </div>
                 </div>
@@ -248,10 +251,10 @@
 
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <div class="page-footer__item page-footer__item--hashtag">
-            <p>#visitSEDONA</p>
-          </div>
-          <div class="page-footer__item social">
+          <p class="page-footer__item page-footer__item--hashtag">
+            #visitSEDONA
+          </p>
+          <div class="page-footer__item page-footer__item--social social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#">
@@ -279,7 +282,7 @@
               </li>
             </ul>
           </div>
-          <div class="page-footer__item copyright">
+          <div class="page-footer__item page-footer__item--copyright copyright">
             <span class="copyright__text">Разработано</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__logo" width="27" height="35">

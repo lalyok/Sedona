@@ -10,6 +10,7 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">  <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
   <body class="page__body">
     <div class="page__body-wrapper">
@@ -60,7 +61,7 @@
           <svg class="page-main__greeting" width="157" height="52" aria-label="Welcome to the gorgeous">
             <use xlink:href="img/sprite.svg#greating-phrase" aria-hidden="true"></use>
           </svg>
-          <svg class="page-main__naming page-main__naming--index" width="230" height="40" aria-label="Sedona">
+          <svg class="page-main__naming page-main__naming--index" width="282" height="49" aria-label="Sedona">
             <use xlink:href="img/sprite.svg#sedona-naming" aria-hidden="true"></use>
           </svg>
           <svg class="page-main__slogan" width="180" height="48" aria-label="Because the Grand Canyon sucks">
@@ -73,20 +74,20 @@
             <header class="section-header">
               <h2 class="visually-hidden">Причины посетить Седону</h2>
               <div class="section-header__wrapper">
-                <b class="section-header__title section-header__title--index">Седона — небольшой <br class="hide hide--tablet hide--desktop">городок в Аризоне,<br>
+                <b class="section-header__title section-header__title--index">Седона — небольшой&ensp;<br class="show show--mobile">городок в Аризоне,<br>
                   заслуживающий большего!</b>
                 <p class="section-header__intro">
-                  Рассмотрим 5 причин, по которым <br class="hide hide--tablet hide--desktop">Седона круче, чем гранд каньон!
+                  Рассмотрим 5 причин, по которым&ensp;<br class="show show--mobile">Седона круче, чем гранд каньон!
                 </p>
               </div>
             </header>
 
             <ol class="features__list">
-              <li class="features__item  feature features__item--has-image feature--has-image">
-                <div class="feature__wrapper">
+              <li class="features__item  feature features__item--has-image feature--has-image feature--triangle-top">
+                <div class="feature__wrapper feature__wrapper--wide">
                   <h3 class="feature__heading feature__heading--opposite-color">Настоящий городок</h3>
                   <p class="feature__text">
-                    Седона не аттракцион для туристов, <br class="hide hide--tablet hide--desktop">там течет своя жизнь
+                    Седона не аттракцион для&ensp;<br class="show show--tablet">туристов,&ensp;<br class="show show--desktop">там течет своя жизнь
                   </p>
                 </div>
                 <div class="features__image-wrapper">
@@ -100,30 +101,30 @@
                 </div>
                 <ul class="features__sub-list feature__sub-list sub-feature">
                   <li class="sub-feature__item sub-feature__item--housing">
-                    <svg class="sub-feature__icon" width="40" height="38" aria-hidden="true" focusable="false"">
+                    <svg class="sub-feature__icon" width="40" height="38" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-house" aria-hidden="true"></use>
                     </svg>
                     <b class="sub-feature__title">Жилье</b>
                     <p class="sub-feature__text">
-                      Рекомендуем пожить в <br class="hide hide--mobile hide--desktop">настоящем мотеле, все <br class="hide hide--mobile hide--desktop">как в кино!
+                      Рекомендуем пожить в&ensp;<br class="show show--mobile show--tablet">настоящем&ensp;<br class="show show--desktop">мотеле, все&ensp;<br class="show show--tablet">как в кино!
                     </p>
                   </li>
                   <li class="sub-feature__item sub-feature__item--souvenirs">
-                    <svg class="sub-feature__icon" width="40" height="38" aria-hidden="true" focusable="false"">
+                    <svg class="sub-feature__icon" width="40" height="38" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-gift" aria-hidden="true"></use>
                     </svg>
                     <b class="sub-feature__title">Сувениры</b>
                     <p class="sub-feature__text">
-                      Не только китайского, но <br class="hide hide--mobile hide--desktop">и местного производства!
+                      Не только китайского,&ensp;<br class="show show--desktop">но&ensp;<br class="show show--tablet">и местного производства!
                     </p>
                   </li>
                   <li class="sub-feature__item sub-feature__item--food">
-                    <svg class="sub-feature__icon" width="40" height="38" aria-hidden="true" focusable="false"">
+                    <svg class="sub-feature__icon" width="40" height="38" aria-hidden="true" focusable="false">
                       <use xlink:href="img/sprite.svg#icon-burger" aria-hidden="true"></use>
                     </svg>
                     <b class="sub-feature__title">Еда</b>
                     <p class="sub-feature__text">
-                      Всегда заказывайте <br class="hide hide--mobile hide--desktop">фирменный бургер, <br class="hide hide--mobile hide--desktop">Вы не разочаруетесь!
+                      Всегда заказывайте&ensp;<br class="show show--mobile">фирменный бургер,&ensp;<br class="show show--tablet show--desktop">Вы не разочаруетесь!
                     </p>
                   </li>
                 </ul>
@@ -132,10 +133,10 @@
                 <div class="feature__wrapper">
                   <h3 class="feature__heading feature__heading--opposite-color">Там есть Мост дьявола</h3>
                   <p class="feature__text">
-                    Да, по нему можно пройти! Если вы <br class="hide hide--tablet hide--desktop">осмелитесь, конечно
+                    Да, по нему можно&ensp;<br class="show show--tablet">пройти!&ensp;<br class="show show--desktop">Если вы&ensp;<br class="show show--tablet">осмелитесь, конечно
                   </p>
                 </div>
-                <div class="features__image-wrapper">
+                <div class="features__image-wrapper features__image-wrapper--right">
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                     <source type="image/webp" srcset="img/photo-bridge.webp 1x, img/photo-bridge@2x.webp 2x">
@@ -149,7 +150,7 @@
                 <div class="feature__wrapper">
                   <h3 class="feature__heading">Небольшая площадь</h3>
                   <p class="feature__text">
-                    Все интересные места <br class="hide hide--mobile hide--desktop">находятся <br class="hide hide--tablet hide--desktop">очень близко
+                    Все интересные места находятся очень близко
                   </p>
                 </div>
               </li>
@@ -157,7 +158,7 @@
                 <div class="feature__wrapper">
                   <h3 class="feature__heading">Красивая дорога</h3>
                   <p class="feature__text">
-                    Ехать в Седону из <br class="hide hide--mobile hide--desktop">Лас-Вегаса <br class="hide hide--tablet hide--desktop"> совсем <br class="hide hide--mobile hide--desktop">не скучно!
+                    Ехать в Седону из&ensp;<br class="show show--tablet">Лас-Вегаса&ensp;<br class="show show--mobile">совсем&ensp;<br class="show show--tablet show--desktop">не скучно!
                   </p>
                 </div>
               </li>
@@ -165,7 +166,7 @@
                 <div class="feature__wrapper">
                   <h3 class="feature__heading">Мало туристов</h3>
                   <p class="feature__text">
-                    Большинство едет в <br class="hide hide--mobile hide--desktop">гранд каньон <br class="hide hide--tablet hide--desktop">и <br class="hide hide--mobile hide--desktop">толпится там
+                    Большинство едет в гранд каньон&ensp;<br class="show show--mobile">и&ensp;<br class="show show--tablet show--desktop">толпится там
                   </p>
                 </div>
               </li>
@@ -178,9 +179,9 @@
             <header class="section-header section-header--proposal">
               <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
               <div class="section-header__wrapper">
-                <b class="section-header__title">Заинтересовались?</b>
+                <b class="section-header__title section-header__title--proposal">Заинтересовались?</b>
                 <p class="section-header__intro">
-                  Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+                  Укажите предполагаемые даты поездки,&ensp;<br class="show show--tablet show--desktop">и мы покажем вам лучшие предложения гостиниц в Седоне
                 </p>
               </div>
             </header>
@@ -200,10 +201,10 @@
 
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <div class="page-footer__item page-footer__item--hashtag">
-            <p>#visitSEDONA</p>
-          </div>
-          <div class="page-footer__item social">
+          <p class="page-footer__item page-footer__item--hashtag">
+            #visitSEDONA
+          </p>
+          <div class="page-footer__item page-footer__item--social social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#">
@@ -231,7 +232,7 @@
               </li>
             </ul>
           </div>
-          <div class="page-footer__item copyright">
+          <div class="page-footer__item page-footer__item--copyright copyright">
             <span class="copyright__text">Разработано</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <svg class="copyright__logo" width="27" height="35">
