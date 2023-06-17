@@ -1,6 +1,6 @@
 # Personal study project "Sedona" 
 
-## A simple multi-page website of the hotel booking service in Sedona.
+## A simple multi-page website layout of the hotel booking service in Sedona.
 
 #### Features:
 
